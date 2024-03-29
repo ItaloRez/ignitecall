@@ -46,6 +46,7 @@ export function CalendarStep({ onSelectDateTime }: CalendarStepProps) {
         {
           params: {
             date: dayjs(selectedDate).format('YYYY-MM-DD'),
+            timezoneOffset: selectedDate ? selectedDate.getTimezoneOffset() : 0,
           },
         },
       )
